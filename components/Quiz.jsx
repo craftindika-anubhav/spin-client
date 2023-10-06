@@ -21,19 +21,19 @@ const Quiz = () => {
     setCong(true);
   };
   return (
-    <div className="  h-full w-[90%] mt-5 max-lg:w-[90%] m-auto flex justify-between   max-[800px]:flex-col max-[800px]:items-center max-[800px]:justify-center max-[800px]:w-full ">
-      <div className="w-1/2  max-[800px]:w-[90%]  mb-5 max-[800px]:mb-0 max-[380px]:w-[90%] relative  flex justify-center items-center max-[800px]:justify-center max-[800px]:items-center flex-col mt-[90px] ">
+    <div className="  h-full  w-[90%] mt-12 max-lg:w-[90%] m-auto flex justify-between   max-[800px]:flex-col max-[800px]:items-center max-[800px]:justify-center max-[800px]:w-full ">
+      <div className="w-1/2  max-[800px]:w-[90%]  mb-3 max-[800px]:mb-0 max-[380px]:w-[90%] relative  flex justify-center items-center max-[800px]:justify-center max-[800px]:items-center flex-col mt-[90px] ">
         {!show && (
-          <div className="w-full ">
-            <h2 className="text-[rgb(217,179,109)] w-[90%] max-[400px]:w-[95%] mb-6 text-[32px] font-semibold">
+          <div className="w-full flexCenter flex-col  ">
+            <h2 className="text-[rgb(217,179,109)] text-center w-[90%] max-[400px]:w-[95%] mb-6 text-[32px] max-[400px]:text-2xl max-[400px]:mb-2 font-semibold">
               {data[counter].questions}
             </h2>
-            <div className="flexBetween flex-wrap ">
+            <div className="flexCenter flex-wrap   ">
               {data[counter].answer.map((e, ii) => (
                 <div
                   onClick={clickHandler}
                   key={ii * 4}
-                  className=" my-2 cursor-pointer w-[80%] max-[400px]:w-[95%] max-w-[300px] h-[50px] text-center font-serif text-white bg-[#D9B36D] px-5 flexCenter rounded-md text-sm hover:bg-gray-400 duration-200 shadow-sm shadow-black"
+                  className=" my-2 cursor-pointer mx-2 w-[80%] max-[400px]:w-[95%] max-w-[290px] h-[50px] text-center  text-white bg-[#D9B36D] px-5 flexCenter rounded-md text-sm sm:hover:bg-gray-400 duration-200 shadow-md shadow-black"
                 >
                   {e}
                 </div>
@@ -46,19 +46,19 @@ const Quiz = () => {
             <h2 className="text-[#D9B36D] text-[32px] font-semibold">
               RODE E GANHE!
             </h2>
-            <div className=" font-serif w-full  text-xs mt-2 mb-4 tracking-wider text-white text-center">
+            <div className="  w-full  text-xs mt-2 mb-4 tracking-wider text-white text-center">
               <p>Gire a roda e tenha a chance de ganhar um prêmio!</p>
             </div>
             <button
               onClick={spinHandler}
-              className=" capitalize my-6 font-serif text-white bg-[#D9B36D] px-16 py-1 rounded-full text-sm hover:bg-gray-300 duration-200 shadow-sm shadow-black"
+              className=" capitalize my-6  text-white bg-[#D9B36D] px-16 py-1 rounded-full text-sm sm:hover:bg-gray-300 duration-200 shadow-sm shadow-black"
             >
               gire a roda!
             </button>
           </div>
         )}
       </div>
-      <div className=" w-1/2 h-screen max-[800px]:h-fit  max-[800px]:w-full flex justify-center items-center max-[800px]:-ml-8  max-[550px]:-ml-0">
+      <div className=" w-1/2 h-screen max-[800px]:h-fit  max-[800px]:w-full flex justify-center items-center -mt-5 max-[800px]:-ml-8  max-[550px]:-ml-0">
         <Spin style={number} />
       </div>
       {cong && (

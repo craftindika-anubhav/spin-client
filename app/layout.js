@@ -1,10 +1,4 @@
 import "./globals.css";
-import { Oswald } from "next/font/google";
-
-const oswald = Oswald({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -14,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={oswald.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

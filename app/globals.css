@@ -7,6 +7,18 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+@font-face {
+  font-family: "arial1";
+  src: url("../public/Arial-Font/arial1.ttf");
+  font-display: swap;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "arial2";
+  src: url("../public/Arial-Font/arial2.ttf");
+  font-display: swap;
+  font-weight: 400;
+}
 
 * {
   margin: 0;
@@ -47,6 +59,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .spin {
   transform: rotate(20deg);
@@ -96,7 +109,7 @@ body {
   transition: 5s ease-in-out !important;
 }
 .g_image {
-  @apply bg-slate-200  rounded-full p-1 -mt-4;
+  @apply -mt-5;
 }
 @media screen and (max-width: 1010px) and (min-width: 800px) {
   .spin div {

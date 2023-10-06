@@ -3,8 +3,7 @@ import React from "react";
 import image from "@/public/shadow.png";
 import stack from "@/public/spin_m.png";
 
-import g1 from "@/public/gift/1.png";
-import g2 from "@/public/gift/2.png";
+import g1 from "@/public/gift/g2.png";
 const coun = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
@@ -27,7 +26,7 @@ const Spin = ({ style }) => {
         <div className="spin w-full h-full bg-white rounded-full relative overflow-hidden ">
           <div className="one h-1/2">
             <Image
-              src={g2}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
@@ -45,7 +44,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="three">
             <Image
-              src={g2}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
@@ -63,7 +62,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="five">
             <Image
-              src={g2}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
