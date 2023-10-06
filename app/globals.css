@@ -8,20 +8,149 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  outline: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 12px;
+}
+
+.title {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+}
+.flexCenter {
+  @apply flex justify-center items-center;
+}
+
+.flexBetween {
+  @apply flex justify-between items-center;
+}
+
+.flexStart {
+  @apply flex items-center justify-start;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url("/bg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.spin {
+  transform: rotate(20deg);
+}
+.spin div {
+  height: 50%;
+  width: 260px;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  position: absolute;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  left: 21%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spin .one {
+  background: #d9b36d;
+  left: 50%;
+}
+.spin .tow {
+  background: rgba(35, 31, 32, 1);
+  transform: rotate(60deg);
+}
+.spin .three {
+  background: #d9b36d;
+  transform: rotate(120deg);
+}
+.spin .four {
+  background: rgba(35, 31, 32, 1);
+  transform: rotate(180deg);
+}
+.spin .five {
+  background: #d9b36d;
+  transform: rotate(240deg);
+}
+.spin .six {
+  background: rgba(35, 31, 32, 1);
+  transform: rotate(300deg);
+}
+.rot {
+  transform: rotate(calc(360deg / 20 * var(--i)));
+  transform-origin: 195px 110px;
+}
+
+.spinWheel {
+  transition: 5s ease-in-out !important;
+}
+.g_image {
+  @apply bg-slate-200  rounded-full p-1 -mt-4;
+}
+@media screen and (max-width: 1010px) and (min-width: 800px) {
+  .spin div {
+    width: 202px;
+  }
+  .rot {
+    transform: rotate(calc(360deg / 20 * var(--i)));
+    transform-origin: 146px 101px;
+  }
+  .mian {
+    width: 350px;
+    height: 350px;
+  }
+  .stack {
+    @apply w-[80px] top-3 right-[40%] -rotate-90;
+  }
+  .spinWheel {
+    @apply rotate-[-17deg];
+  }
+  .dottt {
+    @apply border-[24px];
+  }
+  .img_dot {
+    @apply w-4 h-4  top-[50px] left-1;
+  }
+  .cr {
+    @apply w-[70px] h-[70px];
+  }
+  .g_image {
+    @apply w-[60px] h-[60px] -mt-4;
+  }
+}
+@media (max-width: 550px) {
+  .spin div {
+    width: 202px;
+  }
+  .rot {
+    transform: rotate(calc(360deg / 20 * var(--i)));
+    transform-origin: 146px 101px;
+  }
+  .g_image {
+    @apply w-[60px] h-[60px] -mt-4;
+  }
+}
+@media (max-width: 380px) {
+  .spin div {
+    width: 155px;
+    left: 20%;
+  }
+  .rot {
+    transform: rotate(calc(360deg / 15 * var(--i)));
+    transform-origin: 92px 86px;
+  }
+  .g_image {
+    @apply w-[45px] h-[45px] -mt-4;
+  }
 }
