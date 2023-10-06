@@ -10,15 +10,15 @@ const Cong = ({ number }) => {
   const [show, setShow] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
+      setShow(true);
+    }, number);
+    return () => clearTimeout(timer);
+  }, [number]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
       router.push(
         "https://sementy.store/cart/47062053257528:1?channel=buy_button"
       );
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShow(true);
     }, number + 5000);
     return () => clearTimeout(timer);
   }, [number]);
