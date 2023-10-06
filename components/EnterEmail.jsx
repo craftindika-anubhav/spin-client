@@ -30,7 +30,7 @@ const EnterEmail = () => {
     }
   };
   return (
-    <div className=" w-[960px]  max-lg:w-[90%] m-auto flex justify-between items-center max-[800px]:mt-10  max-[800px]:flex-col max-[800px]:w-full ">
+    <div className=" w-[960px] max-sm:mt-20 h-full  max-lg:w-[90%] m-auto flex justify-center items-center max-[800px]:mt-10  max-[800px]:flex-col max-[800px]:w-full ">
       <div className=" flex justify-start  w-[600px] max-[800px]:w-[93%] max-[800px]:justify-center ">
         <div className="w-[350px] max-[380px]:w-[90%] relative  flexCenter  max-[800px]:justify-center flex-col mt-[90px] ">
           <h2 className=" uppercase text-[#D9B36D] text-center text-3xl max-sm:text-2xl w-full font-semibold">
@@ -92,8 +92,17 @@ const EnterEmail = () => {
               </button>
             </div>
           </form>
-          <div className="border-[#D9B36D] sm:hover:text-gray-300 cursor-pointer sm:hover:border-slate-300 duration-200 text-[10px]  text-[#D9B36D] border-b-[1px]">
-            <Link href="https://sementy.store/policies/terms-of-service">
+          <div className=" flexCenter   duration-200 text-[10px]  text-[#D9B36D] ">
+            <Link
+              href="https://sementy.store/policies/terms-of-service"
+              className="mx-2 border-[#D9B36D] border-b-[1px] sm:hover:text-gray-300 cursor-pointer sm:hover:border-slate-300"
+            >
+              Termos de Serviço
+            </Link>
+            <Link
+              href=" https://sementy.store/policies/privacy-policy"
+              className="mx-2 border-[#D9B36D] border-b-[1px] sm:hover:text-gray-300 cursor-pointer sm:hover:border-slate-300"
+            >
               Política de Privacidade
             </Link>
           </div>
