@@ -110,7 +110,7 @@ const EnterEmail = () => {
                   btnStyle && 'bg-gray-30 shadow-none duration-300 '
                 } `}
               >
-                Enviar
+                Iniciar
                 {loading && (
                   <div
                     style={{ borderTopColor: 'transparent' }}
