@@ -31,7 +31,7 @@ const EnterEmail = () => {
     }
   };
   return (
-    <div className=" w-[960px]    max-lg:w-[90%] m-auto flex justify-center items-center    max-[800px]:flex-col max-[800px]:w-full ">
+    <div className=" w-[960px]   max-lg:w-[90%] m-auto flex justify-center items-center    max-[800px]:flex-col max-[800px]:w-full ">
       <div className=" flex justify-start   w-[600px] max-[800px]:w-[93%] max-[800px]:justify-center ">
         <div className="w-[350px] max-[380px]:w-[90%] relative  flexCenter  max-[800px]:justify-center flex-col mt-[90px] ">
           <h2 className=" uppercase max-[800px]:mt-20 text-[#D9B36D] text-center text-3xl max-sm:text-2xl w-full font-semibold">
