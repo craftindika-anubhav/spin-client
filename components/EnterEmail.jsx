@@ -10,7 +10,7 @@ const EnterEmail = () => {
   const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_DOMAIN;
   const router = useRouter();
   const [email, setEmail] = useState('');
-  const [check, setCheck] = useState(false);
+  const [check, setCheck] = useState(true);
   const [emptyEmail, setEmptyEmail] = useState(false);
   const [emptycheck, setEmptyCheck] = useState(false);
   const [btnStyle, setBtn] = useState(false);
@@ -87,6 +87,7 @@ const EnterEmail = () => {
                 id="myCheck"
                 type="checkbox"
                 className=" cursor-pointer "
+                defaultChecked={true}
                 onChange={(e) => {
                   setCheck(!check);
                   setEmptyCheck(false);
