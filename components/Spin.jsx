@@ -1,9 +1,9 @@
-import Image from "next/image";
-import React from "react";
-import image from "@/public/shadow.png";
-import stack from "@/public/spin_m.png";
+import Image from 'next/image';
+import React from 'react';
+// import image from '@/public/shadow.png';
+// import stack from "@/public/spin_m.png";
 
-import g1 from "@/public/gift/g2.png";
+// import g1 from '@/public/gift/g2.png';
 const coun = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
@@ -11,7 +11,7 @@ const Spin = ({ style }) => {
   return (
     <div className=" relative  h-[450px]  w-[450px] max-[550px]:w-[350px] max-[550px]:h-[350px] mian max-[380px]:w-[250px] max-[380px]:h-[250px]  mt-20  max-[380px]:mt-16">
       <Image
-        src={stack}
+        src={'/spin_m.png'}
         alt="stack"
         width={100}
         height={50}
@@ -19,14 +19,14 @@ const Spin = ({ style }) => {
       />
       <div
         style={{
-          transform: "rotate(" + style + "deg)",
+          transform: 'rotate(' + style + 'deg)',
         }}
         className="relative h-full w-full spinWheel "
       >
         <div className="spin w-full h-full bg-white rounded-full relative overflow-hidden ">
           <div className="one h-1/2">
             <Image
-              src={g1}
+              src={'/gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -35,7 +35,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="tow  ">
             <Image
-              src={g1}
+              src={'/gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -44,7 +44,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="three">
             <Image
-              src={g1}
+              src={'/gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -53,7 +53,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="four">
             <Image
-              src={g1}
+              src={'/gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -62,7 +62,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="five">
             <Image
-              src={g1}
+              src={'/gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -71,7 +71,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="six">
             <Image
-              src={g1}
+              src={'/gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -79,7 +79,7 @@ const Spin = ({ style }) => {
             />
           </div>
           <Image
-            src={image}
+            src={'/shadow.png'}
             alt="shadow"
             fill
             sizes="w-full h-full"
@@ -90,7 +90,7 @@ const Spin = ({ style }) => {
           {coun.map((ele, i) => (
             <div
               style={{
-                "--i": `${i}`,
+                '--i': `${i}`,
               }}
               key={i}
               className={` w-5 h-5 img_dot max-[550px]:w-4 max-[550px]:h-4 max-[380px]:w-3 max-[380px]:h-3 rot absolute top-[85px] max-[550px]:top-[50px] max-[380px]:top-[21px]  left-0 max-[550px]:left-1 max-[380px]:left-[14.3px] rounded-full bg-white   border-2 shadow-md shadow-black border-yellow-200`}
