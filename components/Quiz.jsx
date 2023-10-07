@@ -21,11 +21,11 @@ const Quiz = () => {
     setCong(true);
   };
   return (
-    <div className="  h-full  w-[90%] mt-12 max-lg:w-[90%] m-auto flex justify-between   max-[800px]:flex-col max-[800px]:items-center max-[800px]:justify-center max-[800px]:w-full ">
+    <div className="  h-full pt-14  w-[90%]  max-lg:w-[90%] m-auto flex justify-between   max-[800px]:flex-col max-[800px]:items-center max-[800px]:justify-center max-[800px]:w-full ">
       <div className="w-1/2  max-[800px]:w-[90%]  mb-3 max-[800px]:mb-0 max-[380px]:w-[90%] relative  flex justify-center items-center max-[800px]:justify-center max-[800px]:items-center flex-col mt-[90px] ">
         {!show && (
           <div className="w-full flexCenter flex-col  ">
-            <h2 className="text-[rgb(217,179,109)] text-center w-[90%] max-[400px]:w-[95%] mb-6 text-[32px] max-[400px]:text-2xl max-[400px]:mb-2 font-semibold">
+            <h2 className="text-[rgb(217,179,109)]  text-center w-[90%] max-[400px]:w-[95%] mb-6 text-[32px] max-[400px]:text-2xl max-[400px]:mb-2 font-semibold">
               {data[counter].questions}
             </h2>
             <div className="flexCenter flex-wrap   ">
@@ -33,7 +33,7 @@ const Quiz = () => {
                 <div
                   onClick={clickHandler}
                   key={ii * 4}
-                  className=" my-2 cursor-pointer mx-2 w-[80%] max-[400px]:w-[95%] max-w-[290px] h-[50px] text-center  text-white bg-[#D9B36D] px-5 flexCenter rounded-md text-sm sm:hover:bg-gray-400 duration-200 shadow-md shadow-black"
+                  className=" my-2 cursor-pointer mx-1 w-[80%] max-[400px]:w-[95%] max-w-[290px] h-[50px] text-center  text-white bg-[#D9B36D] px-5 flexCenter rounded-md text-sm sm:hover:bg-gray-400 duration-200 shadow-md shadow-black"
                 >
                   {e}
                 </div>

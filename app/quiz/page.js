@@ -1,18 +1,12 @@
-// import Quiz from "@/components/Quiz";
-// export default function Home() {
-//   return (
-//     <div className="main_bg w-screen">
-//       <Quiz />
-//     </div>
-//   );
-// }
 "use client";
+import Footer from "@/components/Footer";
 import Quiz from "@/components/Quiz";
 import WithAuth from "@/components/WithAuth";
 const Home = () => {
   return (
-    <div className="main_bg w-screen">
+    <div className=" relative z-10  flex justify-between items-center max-[800px]:justify-center flex-col w-full min-h-screen   overflow-hidden">
       <Quiz />
+      <Footer />
     </div>
   );
 };

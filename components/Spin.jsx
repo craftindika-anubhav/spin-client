@@ -9,7 +9,7 @@ const coun = [
 ];
 const Spin = ({ style }) => {
   return (
-    <div className=" relative  h-[450px] w-[450px] max-[550px]:w-[350px] max-[550px]:h-[350px] mian max-[380px]:w-[250px] max-[380px]:h-[250px]  mt-20  max-[380px]:mt-16">
+    <div className=" relative  h-[450px]  w-[450px] max-[550px]:w-[350px] max-[550px]:h-[350px] mian max-[380px]:w-[250px] max-[380px]:h-[250px]  mt-20  max-[380px]:mt-16">
       <Image
         src={stack}
         alt="stack"
