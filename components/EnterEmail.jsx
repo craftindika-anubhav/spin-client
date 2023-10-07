@@ -7,7 +7,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import Footer from './Footer';
 const EnterEmail = () => {
-  const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
+  const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_DOMAIN;
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [check, setCheck] = useState(false);
