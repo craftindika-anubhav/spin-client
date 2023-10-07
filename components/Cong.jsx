@@ -1,10 +1,10 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import ReactConfetti from "react-confetti";
-import Image from "next/image";
-import Link from "next/link";
-import image from "@/public/gift/gg.jpg";
+'use client';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import ReactConfetti from 'react-confetti';
+import Image from 'next/image';
+import Link from 'next/link';
+// import image from "@/public/gift/gg.jpg";
 
 const Cong = ({ number }) => {
   const router = useRouter();
@@ -18,7 +18,7 @@ const Cong = ({ number }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.push(
-        "https://sementy.store/cart/47062053257528:1?channel=buy_button"
+        'https://sementy.store/cart/47062053257528:1?channel=buy_button'
       );
     }, +number + 5000);
     return () => clearTimeout(timer);
@@ -31,9 +31,9 @@ const Cong = ({ number }) => {
     setD({ width: window.innerWidth, height: window.innerHeight });
   };
   useEffect(() => {
-    window.addEventListener("resize", detectSize);
+    window.addEventListener('resize', detectSize);
     return () => {
-      window.removeEventListener("resize", detectSize);
+      window.removeEventListener('resize', detectSize);
     };
   }, [windowD]);
   return (
@@ -54,7 +54,7 @@ const Cong = ({ number }) => {
               </p>
             </div>
             <Image
-              src={image}
+              src={'/gift/gg.jpg'}
               alt="gift"
               width={250}
               height={250}
