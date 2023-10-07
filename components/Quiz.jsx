@@ -1,9 +1,11 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Spin from "./Spin";
-import { data } from "./Questions";
-import Cong from "./Cong";
+'use client';
+import React, { useEffect, useState } from 'react';
+import Spin from './Spin';
+import { data } from './Questions';
+import Cong from './Cong';
+import axios from 'axios';
 const Quiz = () => {
+  const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
   const [counter, setCounter] = useState(0);
   const [show, setShow] = useState(false);
   const [number, setNumber] = useState(Math.ceil(Math.random() * 4000));
@@ -16,9 +18,22 @@ const Quiz = () => {
       setShow(true);
     }
   };
-  const spinHandler = () => {
+
+  const sendEmail = async () => {
+    const email = localStorage.getItem('email');
+    try {
+      await axios.post(`${SERVER_URL}/api/email/send-user`, {
+        email,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const spinHandler = async () => {
     setNumber((pre) => pre + Math.ceil(Math.random() * 4000));
     setCong(true);
+    await sendEmail();
   };
   return (
     <div className="  h-full pt-14  w-[90%]  max-lg:w-[90%] m-auto flex justify-between   max-[800px]:flex-col max-[800px]:items-center max-[800px]:justify-center max-[800px]:w-full ">

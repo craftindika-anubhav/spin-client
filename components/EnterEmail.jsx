@@ -1,20 +1,34 @@
-"use client";
-import React, { useState } from "react";
-import Spin from "./Spin";
-import { sessionState, setA } from "./Session";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import Footer from "./Footer";
+'use client';
+import React, { useState } from 'react';
+import Spin from './Spin';
+import { sessionState, setA } from './Session';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import axios from 'axios';
+import Footer from './Footer';
 const EnterEmail = () => {
+  const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
   const router = useRouter();
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [check, setCheck] = useState(false);
   const [emptyEmail, setEmptyEmail] = useState(false);
   const [emptycheck, setEmptyCheck] = useState(false);
   const [btnStyle, setBtn] = useState(false);
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = async () => {
+    try {
+      await axios.post(`${SERVER_URL}/api/email/send-admin`, {
+        email,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const checkBox = document.getElementById("myCheck");
+    const checkBox = document.getElementById('myCheck');
     if (email.length === 0) {
       setEmptyEmail(true);
     } else {
@@ -26,10 +40,14 @@ const EnterEmail = () => {
       setEmptyCheck(false);
     }
     if (email.trim().length !== 0 && checkBox.checked == true) {
+      setLoading(true);
+      localStorage.setItem('email', email);
+      await sendEmail();
       setA(true);
-      router.push("/quiz");
+      router.push('/quiz');
     }
   };
+
   return (
     <div className=" w-[960px]   max-lg:w-[90%] m-auto flex justify-center items-center    max-[800px]:flex-col max-[800px]:w-full ">
       <div className=" flex justify-start   w-[600px] max-[800px]:w-[93%] max-[800px]:justify-center ">
@@ -88,11 +106,17 @@ const EnterEmail = () => {
               <button
                 onClick={() => setBtn(true)}
                 type="submit"
-                className={` my-6  text-white bg-[#D9B36D] px-16 py-1  rounded-full text-sm sm:hover:bg-gray-300 duration-200 shadow-md shadow-black ${
-                  btnStyle && "bg-gray-30 shadow-none duration-300 "
+                className={` my-6  text-white bg-[#D9B36D] w-[160px] py-1  rounded-full text-sm sm:hover:bg-gray-300 duration-200 shadow-md shadow-black ${
+                  btnStyle && 'bg-gray-30 shadow-none duration-300 '
                 } `}
               >
                 Enviar
+                {loading && (
+                  <div
+                    style={{ borderTopColor: 'transparent' }}
+                    className="w-6 h-6 border-4 border-white rounded-full animate-spin inline-flex ml-2 py-0 my-0 -mb-2"
+                  ></div>
+                )}
               </button>
             </div>
           </form>
