@@ -5,7 +5,7 @@ import { data } from './Questions';
 import Cong from './Cong';
 import axios from 'axios';
 const Quiz = () => {
-  const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
+  const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_DOMAIN;
   const [counter, setCounter] = useState(0);
   const [show, setShow] = useState(false);
   const [number, setNumber] = useState(Math.ceil(Math.random() * 4000));
