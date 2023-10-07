@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-// import image from '@/public/shadow.png';
-// import stack from "@/public/spin_m.png";
+import image from '@/public/shadow.png';
+import stack from '@/public/spin_m.png';
 
-// import g1 from '@/public/gift/g2.png';
+import g1 from '@/public/gift/g2.png';
 const coun = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
@@ -11,7 +11,7 @@ const Spin = ({ style }) => {
   return (
     <div className=" relative  h-[450px]  w-[450px] max-[550px]:w-[350px] max-[550px]:h-[350px] mian max-[380px]:w-[250px] max-[380px]:h-[250px]  mt-20  max-[380px]:mt-16">
       <Image
-        src={'spin_m.png'}
+        src={stack}
         alt="stack"
         width={100}
         height={50}
@@ -26,7 +26,7 @@ const Spin = ({ style }) => {
         <div className="spin w-full h-full bg-white rounded-full relative overflow-hidden ">
           <div className="one h-1/2">
             <Image
-              src={'gift/g2.png'}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
@@ -35,7 +35,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="tow  ">
             <Image
-              src={'gift/g2.png'}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
@@ -44,7 +44,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="three">
             <Image
-              src={'gift/g2.png'}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
@@ -53,7 +53,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="four">
             <Image
-              src={'gift/g2.png'}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
@@ -62,7 +62,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="five">
             <Image
-              src={'gift/g2.png'}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
@@ -71,7 +71,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="six">
             <Image
-              src={'gift/g2.png'}
+              src={g1}
               alt="gift"
               width={80}
               height={80}
@@ -79,7 +79,7 @@ const Spin = ({ style }) => {
             />
           </div>
           <Image
-            src={'shadow.png'}
+            src={image}
             alt="shadow"
             fill
             sizes="w-full h-full"

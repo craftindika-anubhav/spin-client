@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import ReactConfetti from 'react-confetti';
 import Image from 'next/image';
 import Link from 'next/link';
-// import image from "@/public/gift/gg.jpg";
+import image from '@/public/gift/gg.jpg';
 
 const Cong = ({ number }) => {
   const router = useRouter();
@@ -54,7 +54,7 @@ const Cong = ({ number }) => {
               </p>
             </div>
             <Image
-              src={'gift/gg.jpg'}
+              src={image}
               alt="gift"
               width={250}
               height={250}
