@@ -11,7 +11,7 @@ const Spin = ({ style }) => {
   return (
     <div className=" relative  h-[450px]  w-[450px] max-[550px]:w-[350px] max-[550px]:h-[350px] mian max-[380px]:w-[250px] max-[380px]:h-[250px]  mt-20  max-[380px]:mt-16">
       <Image
-        src={'/spin_m.png'}
+        src={'spin_m.png'}
         alt="stack"
         width={100}
         height={50}
@@ -26,7 +26,7 @@ const Spin = ({ style }) => {
         <div className="spin w-full h-full bg-white rounded-full relative overflow-hidden ">
           <div className="one h-1/2">
             <Image
-              src={'/gift/g2.png'}
+              src={'gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -35,7 +35,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="tow  ">
             <Image
-              src={'/gift/g2.png'}
+              src={'gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -44,7 +44,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="three">
             <Image
-              src={'/gift/g2.png'}
+              src={'gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -53,7 +53,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="four">
             <Image
-              src={'/gift/g2.png'}
+              src={'gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -62,7 +62,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="five">
             <Image
-              src={'/gift/g2.png'}
+              src={'gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -71,7 +71,7 @@ const Spin = ({ style }) => {
           </div>
           <div className="six">
             <Image
-              src={'/gift/g2.png'}
+              src={'gift/g2.png'}
               alt="gift"
               width={80}
               height={80}
@@ -79,7 +79,7 @@ const Spin = ({ style }) => {
             />
           </div>
           <Image
-            src={'/shadow.png'}
+            src={'shadow.png'}
             alt="shadow"
             fill
             sizes="w-full h-full"

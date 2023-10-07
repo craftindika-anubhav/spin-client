@@ -54,7 +54,7 @@ const Cong = ({ number }) => {
               </p>
             </div>
             <Image
-              src={'/gift/gg.jpg'}
+              src={'gift/gg.jpg'}
               alt="gift"
               width={250}
               height={250}
