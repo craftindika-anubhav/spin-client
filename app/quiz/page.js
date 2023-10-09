@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className=" relative z-10  flex justify-between items-center max-[800px]:justify-center flex-col w-full min-h-screen   overflow-hidden">
       <Quiz />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
