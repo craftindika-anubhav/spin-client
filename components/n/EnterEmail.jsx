@@ -5,7 +5,6 @@ import { sessionState, setA } from './Session';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import axios from 'axios';
-import Footer from './Footer';
 const EnterEmail = () => {
   const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_DOMAIN;
   const router = useRouter();
@@ -45,7 +44,7 @@ const EnterEmail = () => {
       localStorage.setItem('email', email);
       await sendEmail();
       setA(true);
-      router.push('/quiz');
+      router.push('/n/quiz');
     }
   };
 
@@ -54,8 +53,8 @@ const EnterEmail = () => {
       <div className=" flex justify-start w-[600px] max-[800px]:w-[93%] max-[800px]:justify-center ">
         <div className="w-[400px] max-[380px]:w-[90%] relative  flexCenter  max-[800px]:justify-center flex-col mt-[90px] ">
           <h2 className="max-[800px]:mt-20 text-[#D9B36D] text-center text-2xl max-sm:text-2xl w-full font-semibold">
-            Responda o rápido teste de personalidade e receba um lindo colar com
-            seu signo do zodíaco
+            Faça o rápido teste de personalidade e receba um colar com seu
+            símbolo do zodíaco com 85% de desconto
           </h2>
           <div className="  text-xs mt-5 mb-5 tracking-wider text-white text-center">
             <p>Isso é sobre você.</p>

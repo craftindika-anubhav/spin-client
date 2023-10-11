@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 export const metadata = {
