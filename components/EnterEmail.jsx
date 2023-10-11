@@ -22,6 +22,7 @@ const EnterEmail = () => {
     try {
       await axios.post(`${SERVER_URL}/api/email/send-admin`, {
         email,
+        store: 0,
       });
     } catch (err) {
       console.log(err);
