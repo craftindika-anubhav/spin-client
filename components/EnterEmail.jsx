@@ -1,11 +1,13 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Spin from './Spin';
 import { sessionState, setA } from './Session';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import axios from 'axios';
 import Footer from './Footer';
+import Img from '@/public/hero-img-1.png';
 const EnterEmail = () => {
   const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_DOMAIN;
   const router = useRouter();
@@ -52,11 +54,14 @@ const EnterEmail = () => {
   return (
     <div className=" w-[960px]   max-lg:w-[90%] m-auto flex justify-center items-center    max-[800px]:flex-col max-[800px]:w-full ">
       <div className=" flex justify-start w-[600px] max-[800px]:w-[93%] max-[800px]:justify-center ">
-        <div className="w-[400px] max-[380px]:w-[90%] relative  flexCenter  max-[800px]:justify-center flex-col mt-[90px] ">
-          <h2 className="max-[800px]:mt-20 text-[#D9B36D] text-center text-2xl max-sm:text-2xl w-full font-semibold">
+        <div className="w-[400px] max-[380px]:w-[90%] relative  flexCenter  max-[800px]:justify-center flex-col mt-0 md:mt-10">
+          <h2 className="max-[800px]:mt-20 text-[#D9B36D] text-center text-2xl max-sm:text-2xl w-full font-semibold -mb-8">
             Responda o rápido teste de personalidade e receba um lindo colar com
             seu signo do zodíaco
           </h2>
+          <div>
+            <Image className="-mb-8" alt="hero" src={Img} />
+          </div>
           <div className="  text-xs mt-5 mb-5 tracking-wider text-white text-center">
             <p>Isso é sobre você.</p>
             <p className=" leading-6">
@@ -71,7 +76,7 @@ const EnterEmail = () => {
               type="email"
               name="Email"
               placeholder="Digite Seu E-mail"
-              className=" w-[350px] max-[380px]:w-full m-auto mt-5   text-lg placeholder:text-white  p-3 px-4 text-white  outline-none border-4 border-[#D9B36D] bg-[rgba(35,31,32,1)] "
+              className=" w-[350px] max-[380px]:w-full m-auto mt-1 text-lg placeholder:text-white  p-3 px-4 text-white  outline-none border-4 border-[#D9B36D] bg-[rgba(35,31,32,1)] "
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
